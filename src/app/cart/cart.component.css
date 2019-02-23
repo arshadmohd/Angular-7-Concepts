@@ -1,0 +1,27 @@
+.cart{
+    width: 100%;
+    margin-top: 10px;
+}
+.cartitem{
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #80808040;
+    border-radius: 5px;
+    background: #f8f9fa;
+}
+.cart-header{
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    background: #f8f9fa;
+    border: 0;
+    margin-top: 5px;
+}
+
+.billing-address-header{
+    margin-top: 10px;
+    padding: 5px;
+    background-attachment: gray;
+    text-align: center;
+    color: white
+}

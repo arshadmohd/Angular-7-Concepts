@@ -1,0 +1,41 @@
+<div class="cart-item">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{product.productImage}}" alt="" width="170"> 
+        </div>
+        <div class="col-md-6">
+                <table class="table table-borderless" style="margin:0">
+                        <tr>            
+                            <td class="td-data">
+                                <p><strong>Product Name </strong></p>
+                                <p><b>Price </b></p>
+                                <p><b>Quantity </b></p>
+                                <p><b>Total </b></p>
+                            </td>
+                            <td class="td-data">
+                                    <p>{{product.productName}}</p>
+                                    <p style="color: red;
+                                    font-weight: 500;">{{product.productPrice | currency:"&#8377;"}}</p>
+                                    <p><input type="number" value="{{product.quantity}}" class="form-control" [(ngModel)]="product.quantity"></p>
+                                    <p style="color: red;
+                                    font-weight: 500;">{{product.productPrice * product.quantity | currency:"&#8377;"}}</p>
+                                </td>
+
+                        </tr>
+                    </table>
+        </div>
+        <div class="col-md-3">
+            <div>
+                <button class="btn btn-block" style="color: red;
+                background-color: #6c757d52;
+                border-color: black;"> 
+                   <span><i class="fa fa-heart" aria-hidden="true"></i></span> Add to wishlist</button>
+            </div> 
+            <div style="margin-top: 5px">
+                    <button class="btn btn-block"  style =  "background-color: #dc3545a3;
+                    border-color: black;" (click) = "productDeleted(product)"> 
+                       <span><i class="fa fa-trash" aria-hidden="true"></i></span> Remove from cart</button>
+            </div>            
+        </div>
+    </div>
+</div>

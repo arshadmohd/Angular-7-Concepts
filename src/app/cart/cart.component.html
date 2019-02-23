@@ -1,0 +1,39 @@
+<div (prodDeleted)="deleteProductFromCart(product)">
+<div class="row">
+        <div class="col-md-12">
+            <div class="cart-header">
+               <span><i class="fa fa-cart-plus" aria-hidden="true"></i></span> Your Cart
+            </div>
+        </div>    
+</div>
+<div class="row" *ngIf = "cartProducts && cartProducts.length > 0">
+    <div class="col-md-8">
+            <div class="cart">                    
+                    <div class="cart-body">
+                        <div *ngFor = "let product of cartProducts" class="cartitem">
+                                <cart-item [product] = "product" (prodDeleted)="deleteProductFromCart(product)"></cart-item>
+                        </div>
+                    </div>
+            </div>
+    </div>
+    <div class="col-md-4">
+            <div style="margin-top: 10px ;color: red;
+            font-weight: 500;">
+                Grand Total : {{grandTotal | currency:"&#8377;"}}
+            </div>
+            <div style="margin-top: 10px">
+                    <button class="btn btn-block" style="background-color: #ff830785;
+                    border-color: black;"> 
+                       <span><i class="fa fa-bolt" aria-hidden="true"></i></span> Buy Now</button>
+            </div>
+            <div class="billing-address-header" style="margin-top: 10px; background: gray; padding: 5px">
+               <span><i class="fa fa-address-card" aria-hidden="true"></i></span> Billing Address
+            </div>
+    </div>
+</div>
+<div class="row" *ngIf="cartProducts == undefined || cartProducts.length == 0">
+    <div class="col-md-12">
+        <div  class="alert alert-info" style="text-align: center; margin-top: 5px">Nothing in the cart. Please add something to cart</div>
+    </div>
+</div>
+</div>

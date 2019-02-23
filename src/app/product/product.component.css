@@ -1,0 +1,13 @@
+.product-tile{
+    margin-top: 5px;
+    background: #f8f9fa;
+    border: 1px solid #8080802b
+}
+
+.product-tile .td-image{
+    padding: 5px
+}
+
+.product-tile .td-data div{
+   margin-left: 10px;
+}
