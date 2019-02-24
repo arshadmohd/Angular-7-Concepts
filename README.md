@@ -1,6 +1,27 @@
 # ShoppingApp
+Aim of this project is to explain the core concepts of angular 7
+Covered topic till now:
+    Components
+    Directives
+    Services
+    Pipes
+    How to use external JS library in Angular
+    How to use jQuery in angular
+    Http call
+    Communication between components (parent<->child)
+        @Input
+        @Output
+    Observable
+    Dubscribe
+    OnInit interface
+
+
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+
 
 ## Development server
 
