@@ -1,23 +1,7 @@
 # ShoppingApp
-Aim of this project is to explain the core concepts of angular 7
-Covered topic till now:
-    Components,
-    Directives,
-    Services,
-    Pipes,
-    How to use external JS library in Angular,
-    How to use jQuery in angular,
-    Http call,
-    Communication between components (parent<->child),
-        @Input,
-        @Output,
-    Observable,
-    Dubscribe,
-    OnInit interface,
-
-##Today chnages (24-02-2019)
-Roting, and routing through code,
-Passing query params along with route change
+## Aim of the project
+Aim of the project is to give demo on the below mentioned topics
+`Component | Pipes | Services | Binding | Roting | Parent child communication | Routing with query params | Routing through code | How to use external JS library with typescript | Integration with Bootstrap 4 | Directives | Code structure`
 
 
 
