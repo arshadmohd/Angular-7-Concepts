@@ -1,21 +1,23 @@
 # ShoppingApp
 Aim of this project is to explain the core concepts of angular 7
 Covered topic till now:
-    Components
-    Directives
-    Services
-    Pipes
-    How to use external JS library in Angular
-    How to use jQuery in angular
-    Http call
-    Communication between components (parent<->child)
-        @Input
-        @Output
-    Observable
-    Dubscribe
-    OnInit interface
+    Components,
+    Directives,
+    Services,
+    Pipes,
+    How to use external JS library in Angular,
+    How to use jQuery in angular,
+    Http call,
+    Communication between components (parent<->child),
+        @Input,
+        @Output,
+    Observable,
+    Dubscribe,
+    OnInit interface,
 
-
+##Today chnages (24-02-2019)
+Roting, and routing through code,
+Passing query params along with route change
 
 
 
