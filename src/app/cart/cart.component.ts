@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ProductService } from "../shared/services/product.service";
+import { CartService } from "../shared/services/cart-service";
 
 @Component({
     selector : 'cart',
@@ -11,7 +12,7 @@ export class CartComponent implements OnInit{
 
     cartProducts : any[];
     grandTotal : number = 0;
-    constructor(private productService : ProductService){
+    constructor(private productService : ProductService, private cartService : CartService){
 
     }
     ngOnInit(){
@@ -28,7 +29,10 @@ export class CartComponent implements OnInit{
     deleteProductFromCart(product){
         console.log("deleteProductFromCart"+product);
         this.productService.deleteProductFromCart(product).subscribe(
-            res => this.cartProducts = res
+            res => {
+                this.cartProducts = res;
+                this.cartService.countEmmitter.emit(this.cartProducts.length);
+            }
         )
     }
 }

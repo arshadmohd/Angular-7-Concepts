@@ -1,5 +1,6 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { IProduct } from "../shared/datamodels/IProduct";
+import { ProductService } from "../shared/services/product.service";
 
 @Component({
     selector: 'product',
@@ -8,4 +9,10 @@ import { IProduct } from "../shared/datamodels/IProduct";
 })
 export class ProductComponent{
     @Input() product : IProduct;
+    @Input() productInCart;
+    @Input() productInWishList;
+    constructor(private productService : ProductService){
+    }
+
+    
 }

@@ -4,7 +4,7 @@
     <div class="productlist-content">
         <div class="row">
             <div class="col-md-3 col-sm-6 product-card-holder" *ngFor = "let product of productList">
-                <product [product] = "product" (click)="setSeletedProduct(product)" modal-trigger = "productdetail-modal"></product>
+                <product [product] = "product" [productInCart] ="productInCart(product.productId)" [productInWishList] ="productInWishList(product.productId)" (click)="setSeletedProduct(product)" modal-trigger = "productdetail-modal"></product>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
         <table>
             <tr>
                 <td class="td-image">
-                    <img src="{{selectedProduct.productImage}}" alt="" width = '150' height="150">
+                    <img src ="{{selectedProduct.productImage}}" alt="" width = '150' height="150" (error)="imageError()">
                 </td>
                 <td class="td-data">
                     <div>
@@ -31,7 +31,7 @@
                             </span>
                             <span *ngIf="!selectedProduct.productStock" style="margin-right: 10px; font-weight: 500; color: red">Out of stock</span>
                             <span>
-                                <button class="btn" style="color: red;
+                                <button class="btn" (click) = "addProductToWishList(selectedProduct)" style="color: red;
                                 background-color: #6c757d52;
                                 border-color: black;"> 
                                     <span><i class="fas fa-heart"></i></span> Add to Wishlist

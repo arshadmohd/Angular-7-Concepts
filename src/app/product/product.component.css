@@ -11,3 +11,22 @@
 .product-tile .td-data div{
    margin-left: 10px;
 }
+
+.icon-manager{
+    text-align: center;
+    font-size: 15px;
+}
+.wishlist-heart{
+      margin: 10px;       
+      color: lightgrey; 
+}
+.wishlist-heart.red{
+    color :  red;
+}
+.cart-icon{
+    color: lightgrey;
+}
+
+.cart-icon.orange{
+    color: orange!important;
+}

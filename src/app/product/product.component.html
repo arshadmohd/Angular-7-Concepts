@@ -7,6 +7,9 @@
           <div>
               <p>{{product.productName}}</p>
               <p>{{product.productPrice | currency:"&#8377;"}}</p>
+              <div class="icon-manager"><span class="wishlist-heart" [ngClass] = "{'red': productInWishList}"><i class="fa fa-heart"></i></span>
+                <span class="cart-icon" [ngClass]="{'orange': productInCart}"><i class="fas fa-cart-plus"></i></span>
+              </div>
           </div>
         </td>
       </tr>

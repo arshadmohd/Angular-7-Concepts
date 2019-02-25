@@ -15,6 +15,7 @@ import { SimpleModalComponent } from './shared/modals/simple-modal.component';
 import { ModalTriggerDirective } from './shared/modals/modal-trigger.directive';
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item.component';
+import { CartService } from './shared/services/cart-service';
 
 declare let jQuery;
 
@@ -36,6 +37,7 @@ declare let jQuery;
     FormsModule
   ],
   providers: [ProductService,
+    CartService,
   {provide : JQ_TOKEN, useValue: jQuery}],
   bootstrap: [AppComponent]
 })

@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class ProductService{
 
     productInCart = [];
-    productInWishList : IProduct [];
+    productInWishList = [];
     constructor(private http : HttpClient){
 
     }
@@ -30,6 +30,13 @@ export class ProductService{
             this.productInCart.push(product);
             prodAdded = true;
         }
+
+        var emitter =  new EventEmitter(true);
+        setTimeout(() => {
+            emitter.emit(this.productInCart);
+        },100);
+
+        return emitter;
     }
 
     deleteProductFromCart(product){
@@ -52,6 +59,13 @@ export class ProductService{
 
         return emitter;
     }
+    getProductsFromWishList(){
+        var emitter =  new EventEmitter(true);
+        setTimeout(() => {
+            emitter.emit(this.productInWishList);
+        },100);        
+        return emitter;
+    }
 
     addToWishList(product){
         let prodAddedAlready  = false;
@@ -65,12 +79,14 @@ export class ProductService{
             this.productInWishList.push(product);
             prodAddedAlready = true;
         }
-    }
 
-    getProductsFromWishList(){
         var emitter =  new EventEmitter(true);
         setTimeout(() => {
             emitter.emit(this.productInWishList);
-        },100)
+        },100);        
+        return emitter;
+       
     }
+
+    
 }
