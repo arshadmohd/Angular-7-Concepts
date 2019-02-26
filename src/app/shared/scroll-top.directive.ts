@@ -12,8 +12,6 @@ export class ScrollTopDirective implements OnInit{
     }
     ngOnInit(){
         window.addEventListener('scroll', ()=> {
-            console.log('Top : ',window.scrollY);
-
             if(window.scrollY>600){
                 this.$('.scrollUp').show();
             }{

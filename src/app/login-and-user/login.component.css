@@ -1,0 +1,28 @@
+.login-form-parent{
+    position: relative;    
+    margin: 0 auto;
+}
+
+.login-form-content{
+    position: fixed;
+    display: inline-block;
+    height: 350px;
+    width: 300px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+}
+
+.login-image-div{ 
+    padding: 10px;
+    text-align: center;
+}
+
+.login-buttons{
+    text-align: center;
+}

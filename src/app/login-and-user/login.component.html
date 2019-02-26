@@ -1,0 +1,28 @@
+<div class="login-form-parent">
+    <div class="login-form-content">
+        <div class="login-image-div-parent">
+            <div class="login-image-div">
+                <img src="/src/assets/cart-logo.png" alt="" width="100" class="login-image">
+            </div>
+        </div>
+        <form (ngSubmit)="login()" #loginForm="ngForm">
+            <div class="form-group">
+                <label for="userName">User Name</label>
+                <input type="text" name="userName" id="userName" class="form-control" required>
+            </div>
+            <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
+            </div>
+            <div class="login-buttons">
+                    <span style="margin-right: 10px">
+                            <button class="btn btn-warning">Login</button>
+                        </span>
+                        <span>
+                            <button type="submit" class="btn btn-secondary" (click)="cancelLogin()">Cancel</button>
+                    </span>
+            </div>
+        </form>
+        
+    </div>
+</div>

@@ -17,6 +17,7 @@ import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item.component';
 import { CartService } from './shared/services/cart-service';
 import { ScrollTopDirective } from './shared/scroll-top.directive';
+import { LoginComponent } from './login-and-user/login.component';
 
 declare let jQuery;
 
@@ -30,7 +31,8 @@ declare let jQuery;
     ModalTriggerDirective,
     CartComponent,
     CartItemComponent,
-    ScrollTopDirective
+    ScrollTopDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,    

@@ -17,7 +17,12 @@ import { CartService } from "../shared/services/cart-service";
     },
     .navbar-custom ul a{
         color: white!important;
+    },
+    .login-user-text{
+        padding-left: 10px;
+        color: orange;
     }
+
 `]
 })
 export class NavigationComponent{
