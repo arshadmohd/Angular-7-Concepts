@@ -12,7 +12,7 @@
           <a class="nav-link" [routerLink] = "['/products']">Products</a>
         </li>
         <li class="nav-item" style="margin-right:10px">
-          <a style="position:relative" class="nav-link" [routerLink] = "['/cart']">Cart<span class="cart-count">{{cartItemCount}}</span></a>
+          <a style="position:relative" class="nav-link" [routerLink] = "['/cart']">Cart<span *ngIf="cartItemCount && cartItemCount>0" class="cart-count">{{cartItemCount}}</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink] = "['/wishlist']">Wishlist</a>
