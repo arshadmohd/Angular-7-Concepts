@@ -1,0 +1,17 @@
+.scrollUp div{
+    height: 50px;
+    width: 50px;
+    background-color: #15cbec;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 13px;
+    position: fixed;
+    top: 560px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.scrollUp{
+    display: none;
+}

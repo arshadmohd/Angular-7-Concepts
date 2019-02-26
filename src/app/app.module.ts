@@ -16,6 +16,7 @@ import { ModalTriggerDirective } from './shared/modals/modal-trigger.directive';
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item.component';
 import { CartService } from './shared/services/cart-service';
+import { ScrollTopDirective } from './shared/scroll-top.directive';
 
 declare let jQuery;
 
@@ -28,7 +29,8 @@ declare let jQuery;
     SimpleModalComponent,
     ModalTriggerDirective,
     CartComponent,
-    CartItemComponent
+    CartItemComponent,
+    ScrollTopDirective
   ],
   imports: [
     BrowserModule,    

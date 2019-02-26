@@ -1,6 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container-fluid">
-  <navigation></navigation>
-  <router-outlet></router-outlet>
+  <div scroll-top >
+    <navigation></navigation>
+    <router-outlet></router-outlet>
+    <div class="scrollUp" (click)="scrollTop()">
+      <div><span><i class="fas fa-angle-up"></i></span></div>
+    </div>
+  </div>
 </div>
 
