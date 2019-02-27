@@ -1,7 +1,7 @@
 # ShoppingApp
 ## Aim of the project
 Aim of the project is to give demo on the below mentioned topics
-`Component | Pipes | Services | Binding | Roting | Parent child communication | Routing with query params | Routing through code | How to use external JS library with typescript | Integration with Bootstrap 4 | Directives | Code structure | Event Emmitter | Communication between siblings`
+`Component | Pipes | Services | Binding | Roting | Parent child communication | Routing with query params | Routing through code | How to use external JS library with typescript | Integration with Bootstrap 4 | Directives | Code structure | Event Emmitter | Communication between siblings | Auth gaurd | canActivate | Template based form`
 
 
 

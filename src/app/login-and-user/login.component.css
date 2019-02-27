@@ -6,7 +6,7 @@
 .login-form-content{
     position: fixed;
     display: inline-block;
-    height: 350px;
+    height: 370px;
     width: 300px;
     border: 1px solid lightgrey;
     padding: 10px;
@@ -25,4 +25,17 @@
 
 .login-buttons{
     text-align: center;
+}
+
+small.error{
+    color: red;
+    float: right;
+    font-style: italic
+}
+small.error-invaliduser{
+    color: red;
+    font-style: italic
+}
+.input-error{
+    background: #ff000042
 }

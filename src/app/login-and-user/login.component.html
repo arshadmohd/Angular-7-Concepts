@@ -5,14 +5,17 @@
                 <img src="/src/assets/cart-logo.png" alt="" width="100" class="login-image">
             </div>
         </div>
-        <form (ngSubmit)="login()" #loginForm="ngForm">
-            <div class="form-group">
-                <label for="userName">User Name</label>
-                <input type="text" name="userName" id="userName" class="form-control" required>
+        <form (ngSubmit)="login(loginForm)" #loginForm="ngForm" novalidate>
+            <div><small *ngIf= "isloginChecked && inValidUser" class="error-invaliduser">*Invalid username or password</small></div> 
+            <div class="form-group">                
+                <label for="userName"><i class="fa fa-user" aria-hidden="true"></i> User Name</label>
+                <small *ngIf="loginForm.submitted && loginForm.controls.userName?.invalid" class="error">*Required</small>
+                <input type="text" name="userName" [ngClass]="{'input-error': loginForm.submitted && loginForm.controls.userName?.invalid}" (ngModel)="userName" id="userName" class="form-control" required>
             </div>
             <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" required>
+                    <label for="password"><i class="fa fa-key" aria-hidden="true"></i> Password</label>
+                    <small *ngIf="loginForm.submitted && loginForm.controls.password?.invalid" class="error">*Required</small>
+                    <input type="password" name="password" id="password" (ngModel)="password" class="form-control" [ngClass]="{'input-error': loginForm.submitted && loginForm.controls.password?.invalid}" required>
             </div>
             <div class="login-buttons">
                     <span style="margin-right: 10px">

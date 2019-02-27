@@ -18,6 +18,8 @@ import { CartItemComponent } from './cart/cart-item.component';
 import { CartService } from './shared/services/cart-service';
 import { ScrollTopDirective } from './shared/scroll-top.directive';
 import { LoginComponent } from './login-and-user/login.component';
+import { LoginService } from './shared/services/login.service';
+import { AuthGaurdService } from './login-and-user/auth-gaurd.service';
 
 declare let jQuery;
 
@@ -42,6 +44,8 @@ declare let jQuery;
   ],
   providers: [ProductService,
     CartService,
+    LoginService,
+    AuthGaurdService,
   {provide : JQ_TOKEN, useValue: jQuery}],
   bootstrap: [AppComponent]
 })

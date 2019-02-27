@@ -69,7 +69,7 @@ export class ProductService{
 
     addToWishList(product){
         let prodAddedAlready  = false;
-        for(let prod of this.productInCart){
+        for(let prod of this.productInWishList){
             if(prod.productId == product.productId){
                 prodAddedAlready =  true;
                 break;
