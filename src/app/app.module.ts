@@ -20,6 +20,7 @@ import { ScrollTopDirective } from './shared/scroll-top.directive';
 import { LoginComponent } from './login-and-user/login.component';
 import { LoginService } from './shared/services/login.service';
 import { AuthGaurdService } from './login-and-user/auth-gaurd.service';
+import { UserComponent } from './login-and-user/add-update-user.component';
 
 declare let jQuery;
 
@@ -34,7 +35,8 @@ declare let jQuery;
     CartComponent,
     CartItemComponent,
     ScrollTopDirective,
-    LoginComponent
+    LoginComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,    
