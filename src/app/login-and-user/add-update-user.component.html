@@ -1,15 +1,17 @@
+
 <div class="login-form">
-        <form>
+
+        <form [formGroup]= "registrationForm" novalidate (ngSubmit)= "submitForm(registrationForm)">
                 <div class="form-group row">
                         <label for="name" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="name" placeholder="Name">
+                          <input formControlName = "name" type="text" class="form-control" name= "name" id="name" placeholder="Name">
                         </div>
                 </div>
                 <div class="form-group row">
                         <label for="age" class="col-sm-2 col-form-label">Age</label>
                         <div class="col-sm-10">
-                          <input type="number" class="form-control" id="age" placeholder="Age">
+                          <input formControlName = "age" type="number" class="form-control" name="age" id="age" placeholder="Age">
                 </div>
                 </div>                               
                
@@ -18,13 +20,13 @@
                     <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
                     <div class="col-sm-10">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="male">
+                        <input  formControlName = "gender" class="form-check-input" type="radio" name="gender" id="gridRadios1" value="male">
                         <label class="form-check-label" for="gridRadios1">
                           Male
                         </label>
                     </div> 
                     <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="female">
+                            <input  formControlName = "gender" class="form-check-input" type="radio" name="gender" id="gridRadios2" value="female">
                             <label class="form-check-label" for="gridRadios2">
                               Female
                             </label>
@@ -35,7 +37,7 @@
                 <div class="form-group row">
                         <label for="email" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
-                          <input type="email" class="form-control" id="email" placeholder="Email">
+                          <input formControlName = "email" type="email" class="form-control" name="email" id="email" placeholder="Email">
                         </div>
                       </div>
                 
